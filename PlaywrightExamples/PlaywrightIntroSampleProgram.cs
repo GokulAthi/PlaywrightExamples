@@ -24,6 +24,13 @@ namespace PlaywrightExamples
             var page = await browser.NewPageAsync();
 
             await page.GotoAsync("https://www.google.com");
+
+            await page.FillAsync("name=q", "simply technified");
+
+            await page.ScreenshotAsync(new PageScreenshotOptions
+            {
+                Path = "sampless.jpg"
+            });
         }
     }
 }
